@@ -2,7 +2,9 @@
 <ul>
   <% @films.each do |film|%>
     <li>
-      <strong><%= film.title %></strong><%= " (#{film.year}) - "%><i><small><%= film.genre %></small></i>
+      <strong><%= link_to film.title, film_path(film) %></strong><%= " (#{film.year}) - "%>
+      <i><small><%= film.genre %></small></i>
+      <%= image_tag("#{film.picture}", height: '300') %>
     </li>
   <% end %>
 </ul>

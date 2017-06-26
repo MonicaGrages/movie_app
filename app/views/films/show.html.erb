@@ -1,0 +1,10 @@
+<h2><%= "#{@film.title} (#{@film.year}) - "%><small><i><%= @film.genre %></i></small></h2>
+
+<%= image_tag (@film.picture), height: '500' %>
+<p>Synopsis: <%= @film.synopsis %> </p>
+
+<%= link_to "Edit #{@film.title}", film_edit_path(@film) %>
+<br>
+
+<%= link_to "See All Favorite Movies", films_path%>
+
