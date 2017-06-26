@@ -1,0 +1,8 @@
+<h2>Favorite Films</h2>
+<ul>
+  <% @films.each do |film|%>
+    <li>
+      <strong><%= film.title %></strong><%= " (#{film.year}) - "%><i><small><%= film.genre %></small></i>
+    </li>
+  <% end %>
+</ul>
