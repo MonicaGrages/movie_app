@@ -1,2 +1,5 @@
 <h2><%= "Edit #{@film.title}" %></h2>
 <%= render 'form' %>
+
+<br>
+<%= button_to "Delete #{@film.title}", film_delete_path(@film), method: 'delete' %>

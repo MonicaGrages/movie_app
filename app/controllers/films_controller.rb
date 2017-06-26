@@ -9,6 +9,7 @@ class FilmsController < ApplicationController
   end
 
   def new
+    @film = Film.new
   end
 
   def edit
@@ -16,7 +17,8 @@ class FilmsController < ApplicationController
   end
 
   def create
-    @film = Film.create
+    @film = Film.create(title: params["film"]["title"], year: params["film"]["year"], genre: params["film"]["genre"], synopsis: params["film"]["synopsis"], picture: params["film"]["picture"])
+    redirect_to films_path
   end
 
   def update
@@ -26,7 +28,9 @@ class FilmsController < ApplicationController
   end
 
   def delete
-    @film = Find.find(params[:id])
+    @film = Film.find(params[:id])
+    @film.delete
+    redirect_to films_path
   end
 
 end
