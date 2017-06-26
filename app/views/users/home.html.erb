@@ -1,2 +1,7 @@
-<h1>Favorite Films App</h1>
-<p>Sign up or login to start tracking your favorite films</p>
+  <% if user_signed_in? %>
+    <%= link_to "See your favorite films", films_path %>
+    <br>
+    <%= link_to "Add a new film to your favorites", film_new_path %>
+  <% else %>
+    <p>Sign up or login to start tracking your favorite films</p>
+  <% end %>
