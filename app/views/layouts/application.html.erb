@@ -4,7 +4,8 @@
     <title>MovieApp</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Questrial' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -18,7 +19,7 @@
       <%= link_to "Sign up", new_user_registration_path %> |
       <%= link_to "Login", new_user_session_path  %>
     <% end %>
-    <h1><%= link_to "MovieApp", root_path %></h1>
+    <h1 class='page_header'><%= link_to "MovieApp", root_path %></h1>
     <%= yield %>
   </body>
 </html>
