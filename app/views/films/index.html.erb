@@ -1,13 +1,14 @@
 
-<h3>Your Favorite Films</h3>
-<%= link_to 'Add a New Favorite Film', film_new_path %>
+<h2 class='text-center'>Your Favorite Films <span><%= link_to '+', film_new_path %></span></h2>
 
-<ul>
+
+<main class='movies_container'>
   <% @films.each do |film|%>
-    <li>
-      <strong><%= link_to film.title, film_path(film) %></strong><%= " (#{film.year}) - "%>
-      <i><small><%= film.genre %></small></i>
+    <div class='each_movie container'>
       <%= image_tag("#{film.picture}", height: '300') %>
-    </li>
+      <p><strong><%= link_to film.title, film_path(film) %></strong>
+      <%= " (#{film.year}) - "%>
+      <i><small><%= film.genre %></small></i></p>
+    </div>
   <% end %>
-</ul>
+</main>

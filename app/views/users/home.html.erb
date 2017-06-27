@@ -1,7 +1,8 @@
   <% if user_signed_in? %>
-    <%= link_to "See your favorite films", films_path %>
-    <br>
-    <%= link_to "Add a new film to your favorites", film_new_path %>
+    <nav class='nav'>
+      <%= link_to "See your favorite films", films_path %>
+      <%= link_to "Add a new film to your favorites", film_new_path %>
+    </nav>
   <% else %>
-    <p>Sign up or login to start tracking your favorite films</p>
+    <p class='text-center'>Sign up or login to start tracking your favorite films</p>
   <% end %>
