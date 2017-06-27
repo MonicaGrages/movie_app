@@ -1,24 +1,4 @@
-# README
+# MovieApp
+### A Ruby on Rails app for tracking and saving your favorite films
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[App Screenshot](http://i.imgur.com/1kd38fl.png)
