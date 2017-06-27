@@ -4,7 +4,7 @@
 
 <main class='movies_container'>
   <% @films.each do |film|%>
-    <div class='each_movie container'>
+    <div class='each_movie'>
       <%= image_tag("#{film.picture}", height: '300') %>
       <p><strong><%= link_to film.title, film_path(film) %></strong>
       <%= " (#{film.year}) - "%>

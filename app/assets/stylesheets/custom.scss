@@ -51,6 +51,8 @@ body {
 .movies_container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
   .each_movie {
     display: flex;
     flex-direction: column;
