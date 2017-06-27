@@ -2,14 +2,14 @@
   <%= image_tag('http://content.mycutegraphics.com/graphics/movie/kids-watching-movie-in-theater.png', alt:'kids-watching-movie-in-theater', class:'theater_image') %>
 </div>
 
-<% if user_signed_in? %>
-  <nav class='home_nav'>
+<nav class='home_nav'>
+  <% if user_signed_in? %>
     <%= link_to "See your favorite films", films_path, class: 'home_nav_link' %>
     <span class='separator_pipe'>|</span>
     <%= link_to "Add a new film to your favorites", film_new_path, class: 'home_nav_link' %>
     <span class='separator_pipe'>|</span>
     <%= link_to "Search for a film", movie_search_path, class: 'home_nav_link' %>
-  </nav>
-<% else %>
-  <p class='text-center'>Sign up or login to start tracking your favorite films</p>
-<% end %>
+  <% else %>
+    <p class='text-center'><%= link_to "Search For a Film", movie_search_path, class: 'home_nav_link' %></p>
+  <% end %>
+</nav>
