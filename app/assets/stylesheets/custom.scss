@@ -10,13 +10,15 @@ body { padding-top: 60px; }*/
 // And finally bootswatch style itself
 @import "bootswatch/journal/bootswatch";
 
+$pale-sky: #6b717f;
+
 body {
   padding: 20px;
 }
 
 .alert {
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .page_header {
@@ -24,20 +26,34 @@ body {
   font-size: 80px;
 }
 
-.nav {
-  font-size: 30px;
+.home_nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  .home_nav_link, .separator_pipe {
+    font-size: 30px;
+    color: $pale-sky;
+    margin: 15px;
+  }
+}
+
+.user_nav_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.theater_image_container {
+  display: flex;
+  justify-content: center;
+  margin: 25px;
 }
 
 .movies_container {
   display: flex;
   justify-content: space-around;
-}
-
-.each_movie {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .each_movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

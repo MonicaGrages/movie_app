@@ -1,8 +1,13 @@
-  <% if user_signed_in? %>
-    <nav class='nav'>
-      <%= link_to "See your favorite films", films_path %>
-      <%= link_to "Add a new film to your favorites", film_new_path %>
-    </nav>
-  <% else %>
-    <p class='text-center'>Sign up or login to start tracking your favorite films</p>
-  <% end %>
+<div class='theater_image_container'>
+  <%= image_tag('http://content.mycutegraphics.com/graphics/movie/kids-watching-movie-in-theater.png', alt:'kids-watching-movie-in-theater', class:'theater_image') %>
+</div>
+
+<% if user_signed_in? %>
+  <nav class='home_nav'>
+    <%= link_to "See your favorite films", films_path, class: 'home_nav_link' %>
+    <span class='separator_pipe'>|</span>
+    <%= link_to "Add a new film to your favorites", film_new_path, class: 'home_nav_link' %>
+  </nav>
+<% else %>
+  <p class='text-center'>Sign up or login to start tracking your favorite films</p>
+<% end %>
