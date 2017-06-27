@@ -58,4 +58,8 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .each_movie + .each_movie {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
 }
