@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   patch 'films/:id' => 'films#update', as: 'film_update'
   delete 'films/:id' => 'films#delete', as: 'film_delete'
 
+  get 'movie_search' => 'movie_searches#index', as:'movie_search'
+
 end

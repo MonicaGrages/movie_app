@@ -1,0 +1,17 @@
+<h2>Movie Search</h2>
+
+<%= form_for movie_search_path, method: :get do |f|%>
+  <%= f.label :search_term, "Search for a movie title" %>
+  <%= f.text_field :search_term %>
+
+  <%= f.submit "Search"%>
+<% end %>
+
+<p>Your search found the following results: </p>
+<ul>
+  <% if @movies %>
+    <% @movies.each do |movie| %>
+      <li><%= movie["Title"] %></li>
+    <% end %>
+  <% end %>
+</ul>
