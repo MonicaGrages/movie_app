@@ -21,6 +21,7 @@ load_and_authorize_resource  only: [:edit, :update, :destroy, :read]
   end
 
   def create
+    puts "create a favorite film here"
     @user = current_user
     @film = @user.films.create(user_id: @user.id, title: params["film"]["title"], year: params["film"]["year"], genre: params["film"]["genre"], synopsis: params["film"]["synopsis"], picture: params["film"]["picture"])
 
