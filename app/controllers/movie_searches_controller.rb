@@ -10,7 +10,7 @@ class MovieSearchesController < ApplicationController
       puts @movies
       @movies_array = @movies["Search"]
       puts @movies_array.length
-      @movie_results = @movies_array.paginate(:page => 1, :per_page => 4)
+      @movie_results = @movies_array.paginate(page: params[:page], per_page: 5)
       puts @movie_results.class
       puts @movie_results
     end
