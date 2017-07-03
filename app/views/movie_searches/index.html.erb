@@ -7,15 +7,22 @@
   <%= f.submit "Search"%>
 <% end %>
 
+
 <% if @movie_results %>
   <p>Your search found the following results: </p>
   <ul>
     <% @movie_results.each do |movie| %>
-      <li><%= movie["Title"] %><% if user_signed_in? %> | <%= link_to "Add to Favorites",  film_create_path() %> <% end %></li>
+      <li><%= movie["Title"] %>
+        <% if user_signed_in? %> |
+        <%= link_to "Add to Favorites",film_create_path() %>
+        <% end %>
+      </li>
     <% end %>
   </ul>
 <%= will_paginate @movie_results %>
 <% end %>
+
+
 
 <% if @no_results_message %>
   <p><%= @no_results_message %></p>

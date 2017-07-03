@@ -4,7 +4,7 @@ load_and_authorize_resource  only: [:edit, :update, :destroy, :read]
 
   def index
     @user = current_user
-    @films = @user.films
+    @films = @user.films.paginate(page: params[:page], per_page: 3)
   end
 
   def show
