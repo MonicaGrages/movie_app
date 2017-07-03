@@ -16,3 +16,7 @@
   </ul>
 <%= will_paginate @movie_results %>
 <% end %>
+
+<% if @no_results_message %>
+  <p><%= @no_results_message %></p>
+<% end %>
